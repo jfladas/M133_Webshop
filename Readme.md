@@ -1,7 +1,3 @@
-# Ergänzende Vorlage für Einzelprojekt #
-Diese Vorlage zeigt, wie Sie ein Deno-Projekt komplett in TypeScript (Front- und Backend) umsetzen können.
-Zudem wird gezeigt, wie Sie mehre Pages per Link miteinander Verknüpfen können (Overview- und Detail- Ansicht).
-
 ## Applikations-Start ##
 Sie können die Applikation unter Ubuntu durch Ausführen des Start-Scripts starten:
 `./start.sh`

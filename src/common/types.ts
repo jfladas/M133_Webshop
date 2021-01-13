@@ -1,5 +1,6 @@
-export type Person = {
+export type Item = {
     id: string,
-    firstName: string,
-    lastName: string
+    name: string,
+    price: number,
+    desc: string
 }

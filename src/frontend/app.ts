@@ -1,2 +1,4 @@
-export { loadOverview } from "./page1.ts";
-export { loadDetail } from "./page2.ts";
+export { loadOverview } from "./home.ts";
+export { loadDetail } from "./detail.ts";
+export { loadCart } from "./cart.ts";
+export { loadCheckout } from "./checkout.ts";

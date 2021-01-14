@@ -15,6 +15,11 @@ async function loadItems(): Promise<Item[]> {
 
 const items: Item[] = await loadItems();
 
+var cartitems: CartItem[] = [
+    { id: "001", amount: 2, price: 1 },
+    { id: "002", amount: 3, price: 4 }
+];
+
 const router = new Router();
 router
     .get("/api/items", cxt => {
@@ -25,17 +30,24 @@ router
         let singleProduct = null;
         ctx.response.type = 'application/json';
         items.forEach(item => {
-            if(item.id == id)
-            {
+            if (item.id == id) {
                 singleProduct = item;
             }
         });
         ctx.response.body = singleProduct;
     })
-    .get("/api/images/:image", async context => {
-        const image = await Deno.readFile(`${Deno.cwd()}/src/backend/images/${context.params.image}`);
-        context.response.body = image;
-        context.response.headers.set('Content-Type', 'image/jpg');
+    .get("/api/images/:image", async ctx => {
+        const image = await Deno.readFile(`${Deno.cwd()}/src/backend/images/${ctx.params.image}`);
+        ctx.response.body = image;
+        ctx.response.headers.set('Content-Type', 'image/jpg');
+    })
+    .get("/api/cartprice", async ctx => {
+        ctx.response.type = 'text/plain';
+        let price = 0;
+        cartitems.forEach(cartitem => {
+            price += cartitem.amount * cartitem.price;
+        });
+        ctx.response.body = price;
     });
 
 export const api = router.routes();

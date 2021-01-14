@@ -1,18 +1,26 @@
 <!DOCTYPE html>
 <html lang="de">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
+    <title>WebStore</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
+    <header>
+        <h1>WebStore</h1>
+    </header>
+    <a href="cart.html"><img id="cart" src="images/cart.png">cart</a>
     <main>
-        <ul></ul>
+        <div id="container">
+        </div>
     </main>
     <script type="module">
-        import { loadOverview } from "./build.app.js";
-        loadOverview();
+        import { loadItems } from "./build.app.js";
+        loadItems();
     </script>
 </body>
+
 </html>

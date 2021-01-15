@@ -5,6 +5,223 @@ html, body {
     font-size: 16px;
 }
 
+h1{
+    margin: 20px;
+}
+
+.cart, .box{
+    position: relative;
+    text-align: center;
+    background-color: #eee;
+    border-radius: 25px;
+    width: 80%;
+    margin: 3%;
+    margin-left: 10%;
+}
+.cart{
+    margin-left: 60%;
+    width: 30%;
+}
+.cart:hover, .box:hover{
+    background-color: #ddd;
+}
+
 img {
-    max-height: 50px;
+    max-width: 90%;
+    margin: 5%;
+    border-radius: 15px;
+}
+
+.cartimg{
+    height: 20px;
+    margin: 5px;
+    border-radius: 0;
+}
+
+.cartprice{
+    font-weight: bold;
+    float: right;
+    margin-right: 10%;
+    margin-top: 5%;
+    margin-bottom: 0;
+    font-size: 90%;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
+
+.name{
+    color: white;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    max-width: 80%;
+    position: absolute;
+    top: 0;
+    padding: 3%;
+    padding-left: 7%;
+    padding-right: 5%;
+    font-weight: bold;
+    font-size: 30px;
+    text-align: left;
+}
+.name.detail{
+    top: 50%;
+}
+
+.discount{
+    color: white;
+    font-weight: bold;
+    background-color: rgba(255, 0, 0, 0.7);
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    position: absolute;
+    bottom: 0;
+    padding: 3%;
+    padding-left: 7%;
+    padding-right: 5%;
+    font-size: 30px;
+}
+.discount.detail{
+    bottom: 20%;
+}
+
+.price{
+    color: red;
+    text-decoration: line-through;
+    background-color: rgba(133, 133, 133, 0.5);
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    position: absolute;
+    bottom: 17%;
+    padding: 3%;
+    padding-left: 7%;
+    padding-right: 5%;
+    font-size: 20px;
+}
+.price.detail{
+    bottom: 16%;
+}
+
+#addToCart, #submit, #btnCheckout{
+    background-color: #eee;
+    border: none;
+    border-radius: 20px;
+    width: 50%;
+    margin: 3%;
+    margin-left: 25%;
+    margin-top: 50px;
+    font-size: 30px;
+    padding: 7px;
+}
+#addToCart:hover{
+    background-color: #ddd;
+    font-weight: bold;
+}
+
+table {
+    margin-left: 20px;
+    margin: 20px;
+    background-color: #eee;
+    border-style: solid;
+    border-color: white;
+    border-width: 3px;
+    font-size: 20px;
+}
+
+input{
+    background-color: #eee;
+    border: none;
+    border-radius: 10px;
+    font-size: 20px;
+    margin: 5px;
+    margin-left: 20px;
+    padding: 3px;
+}
+#submit{
+    background-color: #eee;
+    border: none;
+    border-radius: 20px;
+    width: 50%;
+    margin: 3%;
+    margin-left: 25%;
+    margin-top: 50px;
+    font-size: 30px;
+    padding: 7px;
+}
+
+@media screen and (min-width: 1024px) {
+
+h1{
+    font-size: 60px;
+}
+
+.container{
+    display: inline;
+}
+
+.cart, .box{
+    display: inline-block;
+    width: 43%;
+    margin: 3%;
+}
+.cart{
+    margin-left: 85%;
+    width: 10%;
+}
+
+.cartimg{
+    height: 25px;
+    margin: 5px;
+    border-radius: 0;
+}
+
+.cartprice{
+    font-size: 150%;
+}
+
+.name{
+    font-size: 50px;
+}
+.name.detail{
+    top: 20%;
+    padding: 2%;
+}
+
+.detailimg{
+    margin: 0;
+    margin-left: 30%;
+}
+
+.discount{
+    border-top-right-radius: 25px;
+    border-bottom-right-radius: 25px;
+    font-size: 50px;
+}
+.discount.detail{
+    bottom: 20%;
+    padding: 2%;
+}
+
+.price{
+    border-top-right-radius: 25px;
+    border-bottom-right-radius: 25px;
+    bottom: 14%;
+    font-size: 35px;
+}
+.price.detail{
+    bottom: 13%;
+    padding: 2%;
+}
+
+#addToCart, #submit, #btnCheckout{
+    border-radius: 25px;
+    width: 30%;
+    margin-left: 25%;
+    margin-top: 50px;
+    font-size: 50px;
+    padding: 10px;
+}
 }

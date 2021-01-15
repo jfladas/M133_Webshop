@@ -10,17 +10,21 @@ export async function loadItems() {
     const cart = await response2.json();
 
     container.innerHTML +=
-        `<div>
-            <a href="/cart.html" class="button"><img src="images/cart.png" class="cartimg"/>CHF ${cart.price.toFixed(2)}</a>
+        `<div class="cart">
+            <a href="/cart.html">
+                <img src="images/cart.png" class="cartimg"/>
+                <p class="cartprice">CHF ${cart.price.toFixed(2)}</p>
+            </a>
         </div>`;
     
     for (const item of items) {
         container.innerHTML +=
-            `<div>
-                <a href="detail.html?id=${item.id}" class="button">
+            `<div class="box">
+                <a href="detail.html?id=${item.id}">
                     <img src="api/images/${item.imageName}"/>
-                    ${item.productName}
-                    <p class="discount">${item.specialOffer}</p><p class="price">${item.normalPrice}</p>
+                    <p class="name">${item.productName}</p>
+                    <p class="discount">${item.specialOffer.toFixed(2)}</p>
+                    <p class="price">${item.normalPrice.toFixed(2)}</p>
                 </a>
             </div>`;
     }

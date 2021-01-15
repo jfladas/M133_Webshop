@@ -1,9 +1,18 @@
 /// <reference lib="dom" />
 
-import { Item } from "../common/types.ts";
+export async function deleteCart() {
 
-export async function loadCheckout() {
-    const itemId = new URLSearchParams(window.location.search).get("itemId"); 
-    const response = await fetch(`/api/items/${itemId}`);
-    const item: Item = await response.json();
+    const response = await fetch("/api/cart", {
+        method: "delete",
+        headers: {
+            "Content-type": "application/json"
+        }
+    });
+
+    if (response.status == 200) {
+        location.href = "/home.html";
+        alert("order placed successfully!");
+    } else {
+        alert(await response.text());
+    }
 }

@@ -9,7 +9,7 @@
     },
     {
         "id": "002",
-        "productName": "Rispentomaten",
+        "productName": "Rispen-Tomaten",
         "specialOffer": 2.65,
         "normalPrice": 3.1,
         "imageName": "tomaten.jpg",
@@ -49,7 +49,7 @@
     },
     {
         "id": "007",
-        "productName": "Magunm Almond",
+        "productName": "Magnum Almond",
         "specialOffer": 7.9,
         "normalPrice": 9.9,
         "imageName": "vanille_glace.jpg",

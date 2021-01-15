@@ -7,15 +7,26 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <header>
+        <a href="/home.html">
+            <h1 href="/home.html">WebStore</h1>
+        </a>
+    </header>
     <main>
-        <article>
-            <h1></h1>
-            <span></span>
-        </article>
+        <form id="form">
+            <input class="input" type="text" id="firstname" name="firstname" placeholder="first name" required><br>
+            <input class="input" type="text" id="lastname" name="lastname" placeholder="last name" required><br>
+            <input class="input" type="email" id="email" name="email" placeholder="email" required><br>
+        
+            <input type="submit" value="place order" id="submit">
+        </form>
     </main>
     <script type="module">
-        import { loadCheckout } from "./build.app.js";
-        loadCheckout();
+        import { deleteCart } from "./build.app.js";
+        document.getElementById("form").addEventListener("submit", async event => {
+            event.preventDefault();
+            await deleteCart();
+        });
     </script>
 </body>
 </html>

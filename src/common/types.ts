@@ -12,3 +12,8 @@ export type CartItem = {
     amount: number,
     price: number
 }
+
+export type Cart = {
+    price: number,
+    items: CartItem[]
+}
